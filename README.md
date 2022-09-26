@@ -126,6 +126,7 @@ terraform {
 }
 
 inputs = {
+  token                    = local.pagerduty_key.key
   create_escalation_policy = true
 
   escalation_policies = [
