@@ -11,7 +11,7 @@ provider "pagerduty" {
 }
 
 module "escalation_policies" {
-  source = "git@github.com:adamwshero/terraform-pagerduty-escalation-policy.git//.?ref=1.0.0"
+  source = "git@github.com:adamwshero/terraform-pagerduty-escalation-policy.git//.?ref=1.0.1"
 
   create_escalation_policy = true
   escalation_policies = [

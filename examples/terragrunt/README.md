@@ -27,10 +27,11 @@ include {
 }
 
 terraform {
-  source = "git@github.com:adamwshero/terraform-pagerduty-escalation-policy.git//.?ref=1.0.0"
+  source = "git@github.com:adamwshero/terraform-pagerduty-escalation-policy.git//.?ref=1.0.1"
 }
 
 inputs = {
+  token                    = local.pagerduty_key.key
   create_escalation_policy = true
 
   escalation_policies = [
