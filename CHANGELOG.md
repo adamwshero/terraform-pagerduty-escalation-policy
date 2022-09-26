@@ -1,6 +1,6 @@
 ## v1.0.1 (September 26, 2022)
 
-INITIAL:
+CHORE:
 
 * Fixed output
 * Updated examples
