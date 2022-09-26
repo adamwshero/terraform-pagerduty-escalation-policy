@@ -35,9 +35,11 @@ You already have a PagerDuty API key to use for this deployment.
 ### Complete Terraform Example
 ```
 module "escalation_policies" {
-  source = "git@github.com:adamwshero/terraform-pagerduty-escalation-policy.git//.?ref=1.0.0"
+  source = "git@github.com:adamwshero/terraform-pagerduty-escalation-policy.git//.?ref=1.0.1"
 
+  token                    = file(./my_pagerduty_api_key.yaml)  
   create_escalation_policy = true
+
   escalation_policies = [
     {
       name        = "TEST Engineering Escalation 1"
@@ -122,10 +124,11 @@ include {
 }
 
 terraform {
-  source = "git@github.com:adamwshero/terraform-pagerduty-escalation-policy.git//.?ref=1.0.0"
+  source = "git@github.com:adamwshero/terraform-pagerduty-escalation-policy.git//.?ref=1.0.1"
 }
 
 inputs = {
+  token                    = local.pagerduty_key.key
   create_escalation_policy = true
 
   escalation_policies = [
