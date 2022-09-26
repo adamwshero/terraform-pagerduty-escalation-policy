@@ -1,4 +1,4 @@
-output "pagerduty_escalation_policy_ids" {
+output "pagerduty_escalation_policy_id" {
   description = "Ids of PagerDuty Escalation Policies."
   value       = pagerduty_escalation_policy.this[0].id
 }
